@@ -9866,13 +9866,12 @@ NvBool nvEvoUse2Heads1OR(const NVDpyEvoRec *pDpyEvo,
      * including its existing uncompressed color-depth fallbacks.
      */
     NVDpyAttributeColor dpyColor = *pDpyColor;
-    NVDscInfoEvoRec dscInfo = { };
 
     return !nvDPValidateModeEvo(pDpyEvo, pTimings,
                                 colorFormatSpecified,
                                 colorBpcSpecified,
                                 &dpyColor, FALSE /* b2Heads1Or */,
-                                &dscInfo, pParams);
+                                NULL /* pDscInfo */, pParams);
 }
 
 NvBool nvIsLockGroupFlipLocked(const NVLockGroup *pLockGroup)
