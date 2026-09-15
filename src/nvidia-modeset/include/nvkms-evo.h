@@ -436,6 +436,8 @@ NvBool nvEvoGetSingleMergeHeadSectionHwModeTimings(
 NvBool nvEvoUse2Heads1OR(const NVDpyEvoRec *pDpyEvo,
                          const NVHwModeTimingsEvo *pTimings,
                          const NVDpyAttributeColor *pDpyColor,
+                         const NvBool colorFormatSpecified,
+                         const NvBool colorBpcSpecified,
                          const struct NvKmsModeValidationParams *pParams);
 
 NvU32 nvGetRefreshRate10kHz(const NVHwModeTimingsEvo *pTimings);

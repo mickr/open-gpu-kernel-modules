@@ -9814,6 +9814,8 @@ NvBool nvEvoGetSingleMergeHeadSectionHwModeTimings(
 NvBool nvEvoUse2Heads1OR(const NVDpyEvoRec *pDpyEvo,
                          const NVHwModeTimingsEvo *pTimings,
                          const NVDpyAttributeColor *pDpyColor,
+                         const NvBool colorFormatSpecified,
+                         const NvBool colorBpcSpecified,
                          const struct NvKmsModeValidationParams *pParams)
 {
     const NVDispEvoRec *pDispEvo = pDpyEvo->pDispEvo;
@@ -9867,8 +9869,8 @@ NvBool nvEvoUse2Heads1OR(const NVDpyEvoRec *pDpyEvo,
     NVDscInfoEvoRec dscInfo = { };
 
     return !nvDPValidateModeEvo(pDpyEvo, pTimings,
-                                FALSE /* colorFormatSpecified */,
-                                FALSE /* colorBpcSpecified */,
+                                colorFormatSpecified,
+                                colorBpcSpecified,
                                 &dpyColor, FALSE /* b2Heads1Or */,
                                 &dscInfo, pParams);
 }
